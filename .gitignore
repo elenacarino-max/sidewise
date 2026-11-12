@@ -1,0 +1,36 @@
+# Entornos y cachés
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.ipynb_checkpoints/
+*.egg-info/
+build/
+dist/
+.coverage
+htmlcov/
+# Secretos
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+# Datos y artefactos locales
+/data/raw/*
+!/data/raw/README.md
+/data/interim/*
+!/data/interim/README.md
+/data/processed/*
+!/data/processed/README.md
+mlruns/
+mlartifacts/
+chroma_db/
+*.log
+# Sistema y editores
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

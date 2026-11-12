@@ -1,0 +1,1 @@
+"""Módulo common de Sidewise."""

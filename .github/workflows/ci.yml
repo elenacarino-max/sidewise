@@ -1,0 +1,17 @@
+name: Comprobaciones iniciales
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Comprobar sintaxis Python
+        run: python -m compileall -q src apps scripts
+      - name: Validar metadatos
+        run: python -c "import pathlib, tomllib; tomllib.loads(pathlib.Path('pyproject.toml').read_text())"
+# Incorporar pruebas funcionales cuando exista implementación.
